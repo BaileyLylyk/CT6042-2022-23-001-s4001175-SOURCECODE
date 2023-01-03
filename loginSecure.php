@@ -5,8 +5,8 @@ $sql = "SELECT * FROM USER WHERE EMAIL = ? AND Password= ?";
 
 if($stmt = $conn->prepare($sql)){
 
-    $email = $_GET['email'];
-    $pass = $_GET['password'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
     $stmt->bind_param("ss", $email, $pass);
 
     
